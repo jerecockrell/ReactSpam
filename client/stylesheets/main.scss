@@ -5,3 +5,46 @@ body {
   font: 100% $font-stack;
   background: $primary-color;
 }
+
+.my-btn {
+  margin: 5px;
+}
+
+#wheelchair {
+  font-size: 500px !important;
+  margin-left: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card-size {
+  width: 33%;
+}
+
+.fish-img {
+	display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.myContainer {
+  margin-bottom: 10%;
+}
+
+.fishflex {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.center-flexbox {
+  display: flex;
+  justify-content: center;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
