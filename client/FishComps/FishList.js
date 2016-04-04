@@ -6,7 +6,8 @@ function FishList(props){
   	// MAP THROUGH OUR DATA AND PASS IT TO FISH CARD;
   	var allFish = props.fishArray.map(item => {
   	  return (
-  	    <FishCard 
+  	    <FishCard
+          deleteFish={props.deleteFish} 
           getId={props.getId}
           id={item._id}
           key={item._id}

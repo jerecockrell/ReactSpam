@@ -7,19 +7,19 @@ function FishForm(props) {
           <h3>Enter New Fish</h3>
           <fieldset className="form-group">
             <label>Name</label>
-            <input onChange={ props.onNameChange } value={ props.fishName } type="text" className="form-control" placeholder="name"/>
+            <input onChange={ props.onNameChange } type="text" className="form-control" placeholder="name"/>
           </fieldset>
           <fieldset className="form-group">
     				<label>Color</label>
-    				<input onChange={ props.onColorChange } value={ props.color } type="text" className="form-control" placeholder="color"/>
+    				<input onChange={ props.onColorChange } type="text" className="form-control" placeholder="color"/>
   				</fieldset>
   				<fieldset className="form-group">
     				<label>Length</label>
-    				<input onChange={ props.onLengthChange } value={ props.length } type="text" className="form-control" placeholder="length"/>
+    				<input onChange={ props.onLengthChange } type="text" className="form-control" placeholder="length"/>
   				</fieldset>
            <fieldset className="form-group">
             <label htmlFor="formGroupExampleInput2">Image src</label>
-            <input onChange={ props.onImageChange } value={ props.img }type="text" className="form-control" placeholder="image"/>
+            <input onChange={ props.onImgChange } type="text" className="form-control" placeholder="image"/>
           </fieldset>
   				
           <fieldset className="form-group">

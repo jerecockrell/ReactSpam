@@ -41,9 +41,39 @@ router.route('/oneFish/:fish_id')
   .get(function(req, res){
     Fish.findById(req.params.fish_id, function(err, fish){
       if(err){
-      	res.status(500).send(err, 'Something broke!');//something
+      	res.status(500).send(err, 'Something has O\'broke!');//something
       } else {
       	res.json(fish);//something
+      }
+    })
+  })
+  .put(function(req, res){
+    Fish.findById(req.params.fish_id, function(err, fish){
+      if(err){
+        //handle err
+      } else {
+        fish.name = req.body.name ? req.body.name : fish.name;
+        fish.color = req.body.color ? req.body.color : fish.color;
+        fish.length = req.body.length ? req.body.length : fish.length;
+        fish.people_eater = req.body.people_eater ? req.body.people_eater : fish.people_eater;
+        fish.img = req.body.img ? req.body.img : fish.img;
+        
+        fish.save(function(err){
+          if(err){
+            res.status(500).send(err, 'You ain\'t changed nothin');
+          } else {
+            res.json(fish)
+          }
+        })
+      }
+    })
+  })
+  .delete(function(req, res){
+    Fish.remove({_id: req.params.fish_id}, function(err, fish){
+      if(err) {
+        res.status(500).send(err, 'Something been deleted')
+      } else {
+        res.json({message: 'Fish deleted'})
       }
     })
   });
